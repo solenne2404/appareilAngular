@@ -25,6 +25,10 @@ export class AppComponent implements OnInit {
   }
 
   onAllumer(){
-    console.log("clic!")
+    this.appareilService.switchOnAll();
+  }
+
+  onEteindre(){
+    this.appareilService.switchOffAll();
   }
 }
