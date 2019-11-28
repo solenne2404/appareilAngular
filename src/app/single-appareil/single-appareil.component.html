@@ -1,3 +1,12 @@
 <h2>{{ name }}</h2>
 <p>Statut : {{ status }} </p>
+<input type="text" class="form-control" [(ngModel)]="name">
+
+<button class="btn btn-success" 
+*ngIf="status === 'éteint'"
+(click)= "onSwitch()">Allumer</button>
+<button class="btn btn-success" 
+*ngIf="status === 'allumé'"
+(click)= "onSwitch()">Eteindre</button>
+<br>
 <a routerLink="/appareils">Retour à la liste</a>

@@ -32,11 +32,15 @@ export class AppareilService {
     }
 
     switchOnOne(i: number){
+      console.log('demande au service')
       this.appareils[i].status = 'allumé';
+      console.log('on')
     }
 
     switchOffOne(i: number){
+      console.log('demande au service')
       this.appareils[i].status = 'éteint'
+      console.log('off')
     }
 
     getAppareilById(id: number) {
