@@ -7,9 +7,7 @@
                   [index]="i" 
                   [id]="appareil.id"></app-appareil>
 </ul>
-<button class="btn btn-success" 
-        [disabled]="!isAuth"
+<button class="btn btn-success m-5" 
         (click) = "onAllumer()" >Tout Allumer</button>
-<button class="btn btn-danger"
-        [disabled]="!isAuth"
+<button class="btn btn-danger m-5"
         (click) = "onEteindre()" >Tout Eteindre</button>

@@ -1,11 +1,11 @@
-<h2>{{ name }}</h2>
+<h2 class="m-5">{{ name }}</h2>
 <p>Statut : {{ status }} </p>
-<input type="text" class="form-control" [(ngModel)]="name">
+<input type="text" class="form-control my-2" [(ngModel)]="name">
 
-<button class="btn btn-success" 
+<button class="btn btn-success my-5" 
 *ngIf="status === 'éteint'"
 (click)= "onSwitch()">Allumer</button>
-<button class="btn btn-success" 
+<button class="btn btn-danger my-5" 
 *ngIf="status === 'allumé'"
 (click)= "onSwitch()">Eteindre</button>
 <br>

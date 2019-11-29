@@ -12,8 +12,9 @@ export class SingleAppareilComponent implements OnInit {
   @Input() name: string;
   @Input() status: string;
   i: number;
+
   constructor(private appareilService: AppareilService,
-                      private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
@@ -21,17 +22,16 @@ export class SingleAppareilComponent implements OnInit {
     this.status = this.appareilService.getAppareilById(+id).status;
     this.i = id-1;
   }
+
   onSwitch() {
     const id = this.route.snapshot.params['id'];
     if(this.status === 'allumé') {
-      console.log('est allumé')
       this.appareilService.switchOffOne(this.i);
       this.status = this.appareilService.getAppareilById(+id).status;
     } else if(this.status === 'éteint') {
-      console.log('est eteint')
+
       this.appareilService.switchOnOne(this.i);
       this.status = this.appareilService.getAppareilById(+id).status;
     }
-    console.log(this.i)
   }
 }
