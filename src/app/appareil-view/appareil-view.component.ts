@@ -23,7 +23,13 @@ export class AppareilViewComponent implements OnInit {
     this.appareilService.emitAppareilSubject();
   }
 
+  onSave() {
+    this.appareilService.saveAppareilsToServer();
+}
 
+onFetch(){
+  this.appareilService.getAppareilsFromServer();
+}
 
   onAllumer(){
     this.appareilService.switchOnAll();
