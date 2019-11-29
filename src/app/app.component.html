@@ -1,8 +1,21 @@
 <nav class="navbar navbar-dark bg-dark" >
     <div class="navbar-collapse ">
       <ul class="nav nav-tabs d-flex flex-row ">
-        <li class="nav-item w-25 " routerLinkActive="active"><a class="nav-link text-decoration-none text-light" routerLink="auth">Authentification</a></li>
-        <li class="nav-item w-25 " routerLinkActive="active"><a class="nav-link text-decoration-none text-light" routerLink="appareils">Appareils</a></li>
+        <li class="nav-item"  
+            routerLinkActive="active">
+            <a class="nav-link text-decoration-none text-light" 
+              routerLink="auth">Authentification</a>
+        </li>
+        <li class="nav-item" 
+            routerLinkActive="active">
+            <a class="nav-link text-decoration-none text-light" 
+                routerLink="appareils">Appareils</a>
+        </li>
+        <li class="nav-item " 
+            routerLinkActive="active">
+            <a class="nav-link text-decoration-none text-light"
+               routerLink="edit">Nouvel appareil</a>
+        </li>
         <li class="nav-item ml-auto text-light mt-auto p-2">Vous êtes connecté depuis {{secondes}} secondes</li>
       </ul>
       
