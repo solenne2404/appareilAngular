@@ -11,7 +11,7 @@
         <label for="status">
           État de l'appareil
         </label>
-        <select id="status" class="form-control" name="status" ngModel>
+        <select id="status" class="form-control" name="status" [ngModel]="defaultOnOff">
           <option value="allumé">Allumé</option>
           <option value="éteint">Éteint</option>
         </select>
