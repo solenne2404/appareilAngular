@@ -35,7 +35,7 @@ export class NewUserComponent implements OnInit {
     return this.userForm.get('hobbies') as FormArray;
   }
 
-  onAddHobbies() {
+  onAddHobby() {
     const newHobbyControl = this.formBuilder.control(null, Validators.required);
     this.getHobbies().push(newHobbyControl);
   }
